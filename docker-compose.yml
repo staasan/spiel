@@ -1,0 +1,11 @@
+services:
+  spiel:
+    build: ./Spiel
+    expose:
+      - "8000"
+
+  endspielbot:
+    build: ./EndSpielBot
+    env_file: .env
+    depends_on:
+      - spiel
