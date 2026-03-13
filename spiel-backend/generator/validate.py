@@ -1,6 +1,9 @@
 import chess
 import chess.syzygy
-tablebase = chess.syzygy.open_tablebase("syzygy/")
+import os
+
+path = os.getenv("SYZYGY_PATH")
+tablebase = chess.syzygy.open_tablebase(path)
 def dist(a, b):
     return max(abs(a[0]-b[0]), abs(a[1]-b[1]))
 def tb_legal(fen: str):

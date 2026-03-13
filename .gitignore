@@ -3,4 +3,5 @@
 *.rtbz
 *.rtbw
 __pycache__
+syzygy
 *.sqlite3
