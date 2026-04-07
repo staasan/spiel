@@ -28,7 +28,7 @@ mkdir -p syzygy
 
 cd syzygy
 
-if [ ! -f "*.rtbw" ]; then
+if [ echo $(ls ./syzygy) = "" ]; then
     echo "Downloading Syzygy 3-4-5 tablebases..."
     wget -e robots=off -r -np -nH --cut-dirs=2 -R "index.html*" http://tablebase.sesse.net/syzygy/3-4-5/
 fi
